@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 style="text-align: center;">PIN  CHANGE</h1>
+
+<form action="" method="post" id="pin">
+     {% csrf_token %}
+     <table cellpadding="18px">
+          <tr>
+               <td><label for="">Account Number:</label></td>
+               <td><input type="number" name="account_no" value=" " id=""></td>
+          </tr> 
+          <tr>
+               <td><label for="" >Pin:</label></td>
+               <td><input type="number" name="pin" value=" " id="" ></td>
+          </tr> 
+          <tr>
+               <td><label for="">Confirm Pin:</label></td>
+               <td><input type="number" name="confirm_pin" id=""></td>
+          </tr>
+     </table>
+     <button type="submit" id="sub">submit</button>
+</form>
+
+{% endblock content %}

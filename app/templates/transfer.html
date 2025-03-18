@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 style="text-align: center;">ACCOUNT TRANSFER</h1>
+
+<form action="" method="post" id="pin">
+     {% csrf_token %}
+     <table cellpadding="18px">
+          <tr>
+               <td><label for="">From:</label></td>
+               <td><input type="number" name="account" id=""></td>
+          </tr> 
+          <tr>
+               <td><label for="" >To</label></td>
+               <td><input type="number" name="account1" id="" ></td>
+          </tr> 
+          <tr>
+               <td><label for="">Amount:</label></td>
+               <td><input type="number" name="amount" id=""></td>
+          </tr>
+          <tr>
+               <td><label for="">pin:</label></td>
+               <td><input type="number" name="pin" id=""></td>
+          </tr>
+     </table>
+     <button type="submit" id="sub">submit</button>
+</form>
+<h1>Balance:{{account.amount}}</h1>
+{% endblock content %}

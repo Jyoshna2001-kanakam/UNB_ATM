@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+     
+     form{
+          border: 2px solid;
+          padding: 15px;
+          border-radius: 15px;
+          /* background-image: linear-gradient(rgb(224, 27, 172),rgb(49, 144, 175)); */
+     }
+     input{
+          height: 30px;
+          width: 200px;
+          border-radius: 10px;
+     }
+     label{
+          font-size: 20px;
+     }
+     .pin{
+          margin: 100px 25%;
+     }
+     #sub{
+          background-color: black;
+          color: white;
+          height: 40px;
+          width: 100px;
+          border-radius: 10px;
+     }
+     </style>
+</head>
+<body>
+     {% include 'nav.html' %}
+     {% block content %}
+
+     {% endblock content %}
+     {% include 'footer.html' %}
+</body>
+</html>

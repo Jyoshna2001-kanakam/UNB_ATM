@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+     form{
+          display: grid;
+          grid-template-rows: repeat(3,1fr);
+          grid-template-columns: repeat(2,1fr);
+          width: 60%;
+          margin: 50px 380px;
+     }
+     #submit{
+          background-color: black;
+          color: white;
+          height: 40px;
+          width: 100px;
+          border-radius: 15px;
+     }
+</style>
+<h1 style="text-align: center;">create account</h1>
+<form action="" method="POST" enctype="multipart/form-data" id="cform">
+     {% csrf_token %}
+     {{form.as_p}} 
+     <button type="submit" id="submit">submit</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 style="text-align: center;">WITH DRAW AMOUNT </h1>
+
+<form action="" method="POST" class="pin">
+     {% csrf_token %}
+     <table cellpadding="18px">
+          <tr>
+               <td><label for="">Account Number:</label></td>
+               <td><input type="number" name="account_no" id=""></td>
+          </tr> 
+          <tr>
+               <td><label for="" >Amount</label></td>
+               <td><input type="number" name="amount" id="" ></td>
+          </tr> 
+          <tr>
+               <td><label for="">Pin:</label></td>
+               <td><input type="number" name="pin" id=""></td>
+          </tr>
+     </table>
+     <button type="submit" id="sub">submit</button>
+</form>
+
+<h1>Balance:{{data.amount}}</h1>
+
+{% endblock content %}
